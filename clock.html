@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>早起打卡</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/clock.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jQuery.textSlider.js"></script>
+    <script type="text/javascript" src="js/clock.js"></script>
+</head>
+<body>
+<!--banner-->
+<div class="banner"><img src="" alt=""></div>
+<!--tips-->
+<ul class="tips">
+    <li>
+        <div class="num">666</div>
+        <p>已积累公益金</p>
+    </li>
+    <li>
+        <div class="num">236</div>
+        <p>参与人数</p>
+    </li>
+    <li>
+        <div class="num">88</div>
+        <p>终极大奖</p>
+    </li>
+</ul>
+<!--join-->
+<div class="join">
+    <div class="top">
+        <div class="topleft">
+            <img src="imgs/圆角矩形1@2x.png" alt="">
+            <div class="text">活动规则</div>
+        </div>
+        <div class="more">更多&nbsp;>&nbsp;</div>
+    </div>
+    <ul class="center">
+        <li>1.日奖金:按时签到成功可瓜分当日签到失败人数*3的奖金</li>
+        <li>2.按时签到满一周，瓜分终极大奖</li>
+        <li>3.报名支付成功后，UNLife将代表你向担当者活动教育基金会的“班班有个图书角”项目捐出1元</li>
+    </ul>
+    <!--<div class="botton">我要加入</div>-->
+</div>
+<!--邀请-->
+<div class="invitation">
+    <div class="top">
+        <div class="topleft">
+            <img src="imgs/圆角矩形1@2x.png" alt="">
+            <div class="text">邀请好友参与</div>
+        </div>
+        <div class="more">我的邀请记录&nbsp;>&nbsp;</div>
+    </div>
+    <ul class="invitationbox">
+        <li><img src="imgs/1.jpg" alt=""></li>
+        <li><img src="imgs/1.jpg" alt=""></li>
+        <li><img src="imgs/1.jpg" alt=""></li>
+        <li><img src="imgs/1.jpg" alt=""></li>
+        <li><img class="plus" src="imgs/邀请.png" alt=""></li>
+    </ul>
+</div>
+<!--排行榜-->
+<div id="bigbox">
+    <div class="RankingList">
+        <ul class="RankingListbox" id="ranklist">
+            <li>
+                <div class="box">
+                    <span class="tiao"></span>
+                    <span class="text">坚持榜</span>
+                    <span class="tiao"></span>
+                </div>
+                <div class="scrollbox">
+                    <ul class="scroll">
+                        <li>
+                            <span class="name">昵称000</span>
+                            <span class="daysnum">20天</span>
+                        </li>
+                        <li>
+                            <span class="name">昵称111</span>
+                            <span class="daysnum">20天</span>
+                        </li>
+                        <li>
+                            <span class="name">昵称222</span>
+                            <span class="daysnum">20天</span>
+                        </li>
+                        <li>
+                            <span class="name">昵称333</span>
+                            <span class="daysnum">20天</span>
+                        </li>
+                        <li>
+                            <span class="name">昵称444</span>
+                            <span class="daysnum">20天</span>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="box">
+                    <span class="tiao"></span>
+                    <span class="text">早起榜</span>
+                    <span class="tiao"></span>
+                </div>
+                <div class="scrollbox1">
+                    <ul class="scroll">
+                        <li>
+                            <span class="name">昵称000</span>
+                            <span class="daysnum">20天</span>
+                        </li>
+                        <li>
+                            <span class="name">昵称111</span>
+                            <span class="daysnum">20天</span>
+                        </li>
+                        <li>
+                            <span class="name">昵称222</span>
+                            <span class="daysnum">20天</span>
+                        </li>
+                        <li>
+                            <span class="name">昵称333</span>
+                            <span class="daysnum">20天</span>
+                        </li>
+                        <li>
+                            <span class="name">昵称444</span>
+                            <span class="daysnum">20天</span>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="box">
+                    <span class="tiao"></span>
+                    <span class="text">邀请榜</span>
+                    <span class="tiao"></span>
+                </div>
+                <div class="scrollbox2">
+                    <ul class="scroll">
+                        <li>
+                            <span class="name">昵称000</span>
+                            <span class="daysnum">20天</span>
+                        </li>
+                        <li>
+                            <span class="name">昵称111</span>
+                            <span class="daysnum">20天</span>
+                        </li>
+                        <li>
+                            <span class="name">昵称222</span>
+                            <span class="daysnum">20天</span>
+                        </li>
+                        <li>
+                            <span class="name">昵称333</span>
+                            <span class="daysnum">20天</span>
+                        </li>
+                        <li>
+                            <span class="name">昵称444</span>
+                            <span class="daysnum">20天</span>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <ul id="zhe"></ul>
+    </div>
+    <!--邀请好友弹框-->
+    <div class="inviteframe">
+        <ul class="sharebox" id="share">
+            <li>
+                <div class="img"><img src="imgs/橙聊.png" alt=""></div>
+                <div class="text">橙聊</div>
+            </li>
+            <li>
+                <div class="img"><img src="imgs/social-qq.png" alt=""></div>
+                <div class="text">qq</div>
+            </li>
+            <li>
+                <div class="img"><img src="imgs/微信.png" alt=""></div>
+                <div class="text">微信</div>
+            </li>
+            <li>
+                <div class="img"><img src="imgs/橙子圈-橙.png" alt=""></div>
+                <div class="text">橙子圈</div>
+            </li>
+            <li>
+                <div class="img"><img src="imgs/朋友圈.png" alt=""></div>
+                <div class="text">朋友圈</div>
+            </li>
+            <li>
+                <div class="img"><img src="imgs/QQ空间.png" alt=""></div>
+                <div class="text">QQ空间</div>
+            </li>
+        </ul>
+        <ul id="sharebox"></ul>
+        <div class="cancel">取消</div>
+    </div>
+</div>
+<div class="bigzhe"></div>
+
+
+<script type="text/javascript">
+    <!--自动播放-->
+    $(document).ready(function(){
+        $(".scrollbox").textSlider({line:2,speed:500,timer:3000});
+    });
+    $(document).ready(function(){
+        $(".scrollbox1").textSlider({line:1,speed:500,timer:3000});
+    });
+    $(document).ready(function(){
+        $(".scrollbox2").textSlider({line:2,speed:600,timer:3000});
+    });
+</script>
+</body>
+</html>
