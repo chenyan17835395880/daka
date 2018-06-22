@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/clock.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jQuery.textSlider.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
     <script type="text/javascript" src="js/clock.js"></script>
 </head>
 <body>
@@ -171,38 +172,52 @@
     </div>
     <!--邀请好友弹框-->
     <div class="inviteframe">
+        <div id="wrapper">
         <ul class="sharebox" id="share">
             <li>
-                <div class="img"><img src="imgs/橙聊.png" alt=""></div>
-                <div class="text">橙聊</div>
+                <a href="#">
+                    <div class="img"><img src="imgs/橙聊.png" alt=""></div>
+                    <div class="text">橙聊</div>
+                </a>
             </li>
             <li>
-                <div class="img"><img src="imgs/social-qq.png" alt=""></div>
-                <div class="text">QQ</div>
+                <a href="#">
+                    <div class="img"><img src="imgs/social-qq.png" alt=""></div>
+                    <div class="text">QQ</div>
+                </a>
             </li>
             <li>
-                <div class="img"><img src="imgs/微信.png" alt=""></div>
-                <div class="text">微信</div>
+                <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">
+                    <div class="img"><img src="imgs/微信.png" alt=""></div>
+                    <div class="text">微信</div>
+                </a>
             </li>
             <li>
-                <div class="img"><img src="imgs/橙子圈-橙.png" alt=""></div>
-                <div class="text">橙子圈</div>
+                <a href="#">
+                    <div class="img"><img src="imgs/橙子圈-橙.png" alt=""></div>
+                    <div class="text">橙子圈</div>
+                </a>
             </li>
             <li>
-                <div class="img"><img src="imgs/朋友圈.png" alt=""></div>
-                <div class="text">朋友圈</div>
+                <a href="#">
+                    <div class="img"><img src="imgs/朋友圈.png" alt=""></div>
+                    <div class="text">朋友圈</div>
+                </a>
             </li>
             <li>
-                <div class="img"><img src="imgs/QQ空间.png" alt=""></div>
-                <div class="text">QQ空间</div>
+                <a href="#">
+                    <div class="img"><img src="imgs/QQ空间.png" alt=""></div>
+                    <div class="text">QQ空间</div>
+                </a>
             </li>
         </ul>
-        <ul id="sharebox"></ul>
+        <!--<ul id="sharebox"></ul>-->
         <div class="cancel">取消</div>
+        </div>
     </div>
 </div>
 <div class="bigzhe"></div>
-
+<!--<div class="bdsharebuttonbox"> <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>-->
 
 <script type="text/javascript">
     $(function(){
@@ -212,6 +227,14 @@
             $(".scrollbox1").textSlider({line:1,speed:600,timer:3000});
             $(".scrollbox2").textSlider({line:1,speed:600,timer:3000});
         });
+        var Scroll = new iScroll('wrapper',{hScrollbar:false, vScrollbar:false});
+
+
+
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+
+
+
     })
 </script>
 </body>

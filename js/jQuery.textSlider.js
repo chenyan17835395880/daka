@@ -5,7 +5,7 @@
     $.fn.textSlider = function(settings){
         settings = jQuery.extend({
             speed : "normal",
-            line : 2,
+            line : 1,
             timer : 3000
         }, settings);
         return this.each(function() {

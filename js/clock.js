@@ -70,11 +70,11 @@ $(function () {
 
 
 
-    /*分享*/
+    /*/!*分享*!/
     //获取需要拖拽的div
     var div2 = document.getElementById("share");
     var zhe2=document.getElementById('sharebox');
-    /*谷歌*/
+    /!*谷歌*!/
     zhe2.ontouchstart = function (evt) {
         evt.preventDefault();
         var oEvent = evt || event;
@@ -103,7 +103,7 @@ $(function () {
             zhe2.ontouchend = null;
         }
     }
-    /*火狐*/
+    /!*火狐*!/
     zhe2.onmousedown = function (evt) {
         evt.preventDefault();
         var oEvent = evt || event;
@@ -131,7 +131,7 @@ $(function () {
             document.onmousemove = null;
             zhe2.onmouseup = null;
         }
-    }
+    }*/
 
 
         /*点击加号出现*/
