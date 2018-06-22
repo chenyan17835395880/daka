@@ -1,47 +1,1 @@
-body{background: #F7F7F9;overflow: hidden;}
-*{margin:0;padding:0;list-style: none;text-decoration: none;}
-.banner{width:100%;height:3.8rem;background: #ccc;}
-/*tips*/
-.tips{width:7.02rem;height:1.2rem;background: #fff;border-radius: 0.2rem;margin:0 auto;margin-top:-0.6rem;box-shadow:  0rem 0rem 0.2rem #F9CFD3;display:flex;justify-content: space-around;align-items: center;}
-.tips li{width:30%;height:0.66rem;display:flex;flex-wrap: wrap;align-content: space-between;}
-.tips li .num{width:100%;height:0.26rem;color:#FF7A3E;text-align: center;font-size: 0.26rem;line-height: 0.26rem;font-weight: bold;}
-.tips li p{width:100%;height:0.26rem;color:#333333;text-align: center;font-size: 0.26rem;}
-/*join*/
-.join{width:6.68rem;height:3.3rem;padding:0.17rem;background: #fff;border-radius: 0.2rem;margin:0 auto;margin-top: 0.2rem;display: flex;flex-wrap:wrap;justify-content: space-between;box-shadow:  0rem 0rem 0.2rem #F9CFD3;}
-.top{width:100%;height:0.4rem;display:flex;justify-content: space-between;align-items: center;}
-.topleft img{width:0.08rem;height:auto;display:block;float:left;}
-.topleft .text{font-size: 0.26rem;color:#333333;float:left;line-height: 0.4rem;margin-left: 0.1rem;}
-.more{font-size: 0.26rem;color:#999999;line-height: 0.4rem;}
-.center{width:100%;height:calc(100% - 1rem);}
-.center li{width:100%;font-size: 0.26rem;color:#333333;line-height: 0.4rem;}
-.botton{width:6rem;height:0.8rem;background: #FF545B;border-radius: 0.4rem;margin:0 auto;font-size: 0.32rem;line-height: 0.8rem;text-align: center;color:#fff;border:0.01rem solid #F02E39;}
-/*邀请*/
-.invitation{width:6.68rem;height:1.8rem;padding:0.17rem;background: #fff;border-radius: 0.2rem;margin:0 auto;margin-top: 0.2rem;display: flex;flex-wrap:wrap;justify-content: space-between;box-shadow:  0rem 0rem 0.2rem #F9CFD3;}
-.invitationbox{width:100%;height:0.8rem;display:flex;justify-content: space-between;align-items: center;}
-.invitationbox li{width:0.8rem;height:0.8rem;}
-.invitationbox li img{width:100%;height:auto;border-radius: 50%;}
-/*排行榜*/
-#bigbox{height:2.6rem;overflow: hidden}
-.RankingList{height:2.2rem;margin:0 auto;margin-top:0.2rem;margin-bottom: 0.4rem;position: relative;}
-.RankingListbox{width:9.4rem;height:100%;display:flex;justify-content: space-between;align-items: center;position: absolute;top:0;left:0;}
-#zhe{width:9.4rem;height:100%;position:absolute;top:0;left:0;}
-.scrollbox,.scrollbox1,.scrollbox2{overflow: auto;}
-.RankingListbox .li{width:32%;height:100%;background: url('../imgs/background.png') no-repeat center/cover;overflow: hidden;box-shadow:  0rem 0rem 0.2rem #F9CFD3;border-radius: 0.2rem;}
-.box{width:1.8rem;height:0.26rem;margin:0 auto;display:flex;justify-content: space-between;align-items: center;margin-top: 0.17rem;margin-bottom:0.2rem;}
-.tiao{width:0.4rem;height:0.02rem;background: #FF545C;}
-.RankingListbox li .text{font-size: 0.26rem;color:#333333;line-height: 0.26rem;}
-.scroll{width:2.55rem;height:1.4rem;margin:0 auto;overflow: hidden;}
-.ul{display:flex;flex-wrap: wrap;justify-content: center;align-content: space-between;}
-.scroll li{width:100%;height:0.47rem;font-size: 0.49rem;color:#666666;line-height: 0.26rem;box-shadow: none;border-radius: 0;}
-.scroll li .name{float:left;}
-.scroll li .daysnum{float:right;}
-/*邀请好友弹框*/
-.inviteframe{width:100%;height:4rem;background: #F7F7F7;position: relative;z-index: 9999;}
-.inviteframe .sharebox,.inviteframe #sharebox{width:9rem;height:2.8rem;display:flex;justify-content: space-between;align-items: center;padding-left:0.2rem;padding-right:0.2rem;position:absolute;top:0;left:0;}
-.inviteframe .sharebox li{width:1.3rem;height:1.72rem;background:#F7F7F7;font-size: 0.26rem;text-align: center;color:#656565;}
-.inviteframe .sharebox li .text{line-height: 0.5rem;}
-.inviteframe .sharebox li .img{width:1.3rem;height:1.3rem;background:#fff;border-radius: 50%;box-shadow:0rem 0rem 0.2rem rgba(232,232,232,0.9);}
-.inviteframe .sharebox li img{width:1.3rem;height:1.3rem;}
-.cancel{width:100%;height:1.1rem;background: #fff;font-size: 0.3rem;color:#323232;line-height:1.1rem;text-align: center;position:absolute;bottom:0;left:0;box-shadow:0rem 0rem 0.2rem rgba(212,206,206,1); }
-
-.bigzhe{width:100%;height:100%;background:rgba(35,33,33,0.3); position: absolute;top:0;left:0;display:none }
+body{background: #F7F7F9;overflow: hidden;}*{margin:0;padding:0;list-style: none;text-decoration: none;}.banner{width:100%;height:3.8rem;background: #ccc;}/*tips*/.tips{width:7.02rem;height:1.2rem;background: #fff;border-radius: 0.2rem;margin:0 auto;margin-top:-0.6rem;box-shadow:  0rem 0rem 0.2rem #F9CFD3;display:flex;justify-content: space-around;align-items: center;}.tips li{width:30%;height:0.66rem;display:flex;flex-wrap: wrap;align-content: space-between;}.tips li .num{width:100%;height:0.26rem;color:#FF7A3E;text-align: center;font-size: 0.26rem;line-height: 0.26rem;font-weight: bold;}.tips li p{width:100%;height:0.26rem;color:#333333;text-align: center;font-size: 0.26rem;}/*join*/.join{width:6.68rem;height:3.3rem;padding:0.17rem;background: #fff;border-radius: 0.2rem;margin:0 auto;margin-top: 0.2rem;display: flex;flex-wrap:wrap;justify-content: space-between;box-shadow:  0rem 0rem 0.2rem #F9CFD3;}.top{width:100%;height:0.4rem;display:flex;justify-content: space-between;align-items: center;}.topleft img{width:0.08rem;height:auto;display:block;float:left;}.topleft .text{font-size: 0.26rem;color:#333333;float:left;line-height: 0.4rem;margin-left: 0.1rem;}.more{font-size: 0.26rem;color:#999999;line-height: 0.4rem;}.center{width:100%;height:calc(100% - 1rem);}.center li{width:100%;font-size: 0.26rem;color:#333333;line-height: 0.4rem;}.botton{width:6rem;height:0.8rem;background: #FF545B;border-radius: 0.4rem;margin:0 auto;font-size: 0.32rem;line-height: 0.8rem;text-align: center;color:#fff;border:0.01rem solid #F02E39;}/*邀请*/.invitation{width:6.68rem;height:1.8rem;padding:0.17rem;background: #fff;border-radius: 0.2rem;margin:0 auto;margin-top: 0.2rem;display: flex;flex-wrap:wrap;justify-content: space-between;box-shadow:  0rem 0rem 0.2rem #F9CFD3;}.invitationbox{width:100%;height:0.8rem;display:flex;justify-content: space-between;align-items: center;}.invitationbox li{width:0.8rem;height:0.8rem;}.invitationbox li img{width:100%;height:auto;border-radius: 50%;}/*排行榜*/#bigbox{height:2.6rem;overflow: hidden}.RankingList{height:2.2rem;margin:0 auto;margin-top:0.2rem;margin-bottom: 0.4rem;position: relative;}.RankingListbox{width:9.4rem;height:100%;display:flex;justify-content: space-between;align-items: center;position: absolute;top:0;left:0;}#zhe{width:9.4rem;height:100%;position:absolute;top:0;left:0;}.scrollbox,.scrollbox1,.scrollbox2{overflow: auto;}.RankingListbox .li{width:32%;height:100%;background: url('../imgs/background.png') no-repeat center/cover;overflow: hidden;box-shadow:  0rem 0rem 0.2rem #F9CFD3;border-radius: 0.2rem;}.box{width:1.8rem;height:0.26rem;margin:0 auto;display:flex;justify-content: space-between;align-items: center;margin-top: 0.17rem;margin-bottom:0.2rem;}.tiao{width:0.4rem;height:0.02rem;background: #FF545C;}.RankingListbox li .text{font-size: 0.26rem;color:#333333;line-height: 0.26rem;}.scroll{width:2.55rem;height:1.4rem;margin:0 auto;overflow: hidden;}.ul{display:flex;flex-wrap: wrap;justify-content: center;align-content: space-between;}.scroll li{width:100%;height:0.49rem;font-size: 0.26rem;color:#666666;line-height: 0.49rem;box-shadow: none;border-radius: 0;}.scroll li .name{float:left;}.scroll li .daysnum{float:right;}/*邀请好友弹框*/.inviteframe{width:100%;height:4rem;background: #F7F7F7;position: relative;z-index: 9999;}.inviteframe .sharebox,.inviteframe #sharebox{width:9rem;height:2.8rem;display:flex;justify-content: space-between;align-items: center;padding-left:0.2rem;padding-right:0.2rem;position:absolute;top:0;left:0;}.inviteframe .sharebox li{width:1.3rem;height:1.72rem;background:#F7F7F7;font-size: 0.26rem;text-align: center;color:#656565;}.inviteframe .sharebox li .text{line-height: 0.5rem;}.inviteframe .sharebox li .img{width:1.3rem;height:1.3rem;background:#fff;border-radius: 50%;box-shadow:0rem 0rem 0.2rem rgba(232,232,232,0.9);}.inviteframe .sharebox li img{width:1.3rem;height:1.3rem;}.cancel{width:100%;height:1.1rem;background: #fff;font-size: 0.3rem;color:#323232;line-height:1.1rem;text-align: center;position:absolute;bottom:0;left:0;box-shadow:0rem 0rem 0.2rem rgba(212,206,206,1); }.bigzhe{width:100%;height:100%;background:rgba(35,33,33,0.3); position: absolute;top:0;left:0;display:none }
