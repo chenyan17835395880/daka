@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -64,9 +64,11 @@
         <li><img class="plus" src="imgs/邀请.png" alt=""></li>
     </ul>
 </div>
+
 <!--排行榜-->
 <div id="bigbox">
     <div class="RankingList">
+        <div id="wrapper1">
         <ul class="RankingListbox" id="ranklist">
             <li class="li">
                 <div class="box">
@@ -168,7 +170,9 @@
                 </div>
             </li>
         </ul>
-        <ul id="zhe"></ul>
+        </div>
+        <!--<ul id="zhe"></ul>-->
+
     </div>
     <!--邀请好友弹框-->
     <div class="inviteframe">
@@ -217,7 +221,7 @@
     </div>
 </div>
 <div class="bigzhe"></div>
-<!--<div class="bdsharebuttonbox"> <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>-->
+
 
 <script type="text/javascript">
     $(function(){
@@ -228,14 +232,14 @@
             $(".scrollbox2").textSlider({line:1,speed:600,timer:3000});
         });
         var Scroll = new iScroll('wrapper',{vScroll: false,hScrollbar:false, vScrollbar:false});
+        var Scroll = new iScroll('wrapper1',{vScroll: false,hScrollbar:false, vScrollbar:false});
 
 
-
-        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
 
 
 
     })
 </script>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
 </body>
 </html>
