@@ -13,7 +13,7 @@ body{background: #F7F7F9;overflow: hidden;}
 .topleft .text{font-size: 0.26rem;color:#333333;float:left;line-height: 0.4rem;margin-left: 0.1rem;}
 .more1{font-size: 0.26rem;color:#999999;line-height: 0.4rem;width:100%;text-align:right; }
 .more{font-size: 0.26rem;color:#999999;line-height: 0.4rem;}
-.center{width:100%;height:2.4rem;margin-top0.2rem;overflow:hidden;}
+.center{width:100%;height:2.4rem;margin-top:0.15rem;overflow:hidden;}
 .center li{width:100%;font-size: 0.26rem;color:#333333;line-height: 0.4rem;}
 /*邀请*/
 .invitation{width:6.68rem;height:1.8rem;padding:0.17rem;background: #fff;border-radius: 0.2rem;margin:0 auto;margin-top: 0.2rem;display: flex;flex-wrap:wrap;justify-content: space-between;box-shadow:  0rem 0rem 0.2rem #F9CFD3;}
