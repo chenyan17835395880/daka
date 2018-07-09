@@ -12,6 +12,7 @@
     <script type="text/javascript" src="js/jQuery.textSlider.js"></script>
     <script type="text/javascript" src="js/iscroll.js"></script>
     <script type="text/javascript" src="js/clock.js"></script>
+
 </head>
 <body>
 <!--banner-->
@@ -20,7 +21,7 @@
 <ul class="tips">
     <li>
         <div class="num">666</div>
-        <p>已积累公益金</p>
+        <p>已累积公益金</p>
     </li>
     <li>
         <div class="num">236</div>
@@ -31,6 +32,24 @@
         <p>终极大奖</p>
     </li>
 </ul>
+<!--活动时间-->
+<div class="activity">
+    <ul class="activityleft">
+        <li>
+            <img src="imgs/形状18@2x.png" alt="">
+            <div class="text">活动时间：<span>2018-2-1至2018-5-1</span></div>
+        </li>
+        <li>
+            <img src="imgs/形状18拷贝@2x.png" alt="">
+            <div class="text">报名截止时间：<span>2018-2-1&nbsp;&nbsp;07:00</span></div>
+        </li>
+        <li>
+            <img src="imgs/形状18拷贝2@2x.png" alt="">
+            <div class="text">签到时间：<span>4:00至7:00</span></div>
+        </li>
+    </ul>
+    <div class="activityright">签到</div>
+</div>
 <!--join-->
 <div class="join">
     <div class="top">
@@ -56,14 +75,29 @@
             <img src="imgs/圆角矩形1@2x.png" alt="">
             <div class="text">邀请好友参与</div>
         </div>
-        <div class="more">我的邀请记录&nbsp;>&nbsp;</div>
     </div>
     <ul class="invitationbox">
-        <li><img src="imgs/1.jpg" alt=""></li>
-        <li><img src="imgs/2.jpg" alt=""></li>
-        <li><img src="imgs/3.jpg" alt=""></li>
-        <li><img src="imgs/4.jpg" alt=""></li>
-        <li><img class="plus" src="imgs/邀请.png" alt=""></li>
+        <li>
+            <img src="imgs/1.jpg" alt="">
+            <p>反反复复</p>
+        </li>
+        <li>
+            <img src="imgs/2.jpg" alt="">
+            <p>反反复复</p>
+        </li>
+        <li>
+            <img src="imgs/3.jpg" alt="">
+            <p>反反复复</p>
+        </li>
+        <li>
+            <img src="imgs/4.jpg" alt="">
+            <p>反反复复</p>
+        </li>
+        <li>
+            <img src="imgs/1.jpg" alt="">
+            <p>反反复复</p>
+        </li>
+        <div id="ulzhe"></div>
     </ul>
 </div>
 
@@ -75,31 +109,31 @@
             <li class="li">
                 <div class="box">
                     <span class="tiao"></span>
-                    <span class="text">坚持榜</span>
+                    <span class="text">奖励榜</span>
                     <span class="tiao"></span>
                 </div>
-                <div class="scrollbox">
+                <div class="scrollbox" id="scrollbox">
                     <div class="scroll">
-                        <ul class="ul">
+                        <ul class="ul" id="rewardlist">
                             <li>
-                                <span class="name">昵称000</span>
-                                <span class="daysnum">20天</span>
+                                <span class="name">称000</span>
+                                <p class="daysnum">20天</p>
                             </li>
                             <li>
-                                <span class="name">昵称111</span>
-                                <span class="daysnum">20天</span>
+                                <span class="name">书上说</span>
+                                <p class="daysnum">20天</p>
                             </li>
                             <li>
-                                <span class="name">昵称222</span>
-                                <span class="daysnum">20天</span>
+                                <span class="name">昵称v哈哈1</span>
+                                <p class="daysnum">20天</p>
                             </li>
                             <li>
-                                <span class="name">昵称333</span>
-                                <span class="daysnum">20天</span>
+                                <span class="name">昵ooo称sss</span>
+                                <p class="daysnum">20天</p>
                             </li>
                             <li>
-                                <span class="name">昵称444</span>
-                                <span class="daysnum">20天</span>
+                                <span class="name">昵称uu</span>
+                                <p class="daysnum">20天</p>
                             </li>
                         </ul>
                     </div>
@@ -112,27 +146,27 @@
                     <span class="tiao"></span>
                 </div>
                 <div class="scrollbox1">
-                    <div class="scroll">
-                        <ul class="ul">
+                    <div class="scroll1">
+                        <ul class="ul" id="earlylist">
                             <li>
-                                <span class="name">昵称000</span>
-                                <span class="daysnum">20天</span>
+                                <span class="name">昵称yyy</span>
+                                <p class="daysnum">20天</p>
                             </li>
                             <li>
-                                <span class="name">昵称111</span>
-                                <span class="daysnum">20天</span>
+                                <span class="name">昵称qqq</span>
+                                <p class="daysnum">20天</p>
                             </li>
                             <li>
-                                <span class="name">昵称222</span>
-                                <span class="daysnum">20天</span>
+                                <span class="name">昵称ooo</span>
+                                <p class="daysnum">20天</p>
                             </li>
                             <li>
-                                <span class="name">昵称333</span>
-                                <span class="daysnum">20天</span>
+                                <span class="name">昵称ppp</span>
+                                <p class="daysnum">20天</p>
                             </li>
                             <li>
                                 <span class="name">昵称444</span>
-                                <span class="daysnum">20天</span>
+                                <p class="daysnum">20天</p>
                             </li>
                         </ul>
                     </div>
@@ -145,66 +179,33 @@
                     <span class="tiao"></span>
                 </div>
                 <div class="scrollbox2">
-                    <div class="scroll">
-                        <ul class="ul">
+                    <div class="scroll2">
+                        <ul class="ul" id="invitelist">
                             <li>
                                 <span class="name">昵称000</span>
-                                <span class="daysnum">20天</span>
+                                <p class="daysnum">20天</p>
                             </li>
                             <li>
                                 <span class="name">昵称111</span>
-                                <span class="daysnum">20天</span>
+                                <p class="daysnum">20天</p>
                             </li>
                             <li>
                                 <span class="name">昵称222</span>
-                                <span class="daysnum">20天</span>
+                                <p class="daysnum">20天</p>
                             </li>
                             <li>
                                 <span class="name">昵称333</span>
-                                <span class="daysnum">20天</span>
+                                <p class="daysnum">20天</p>
                             </li>
                             <li>
                                 <span class="name">昵称444</span>
-                                <span class="daysnum">20天</span>
+                                <p class="daysnum">20天</p>
                             </li>
                         </ul>
                     </div>
                 </div>
             </li>
         </ul>
-        </div>
-
-    </div>
-    <!--邀请好友弹框-->
-    <div class="inviteframe">
-        <div id="wrapper">
-        <ul class="sharebox bdsharebuttonbox" id="share">
-            <li>
-                <a href="#"></a>
-                <div class="text">橙聊</div>
-            </li>
-            <li>
-                <a href="#"></a>
-                <div class="text">橙子圈</div>
-            </li>
-            <li>
-                <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-                <div class="text">QQ</div>
-            </li>
-            <li>
-                <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-                <div class="text">QQ空间</div>
-            </li>
-            <li>
-                <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-                <div class="text">微信</div>
-            </li>
-            <li>
-                <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-                <div class="text">新浪微博</div>
-            </li>
-        </ul>
-        <div class="cancel">取消</div>
         </div>
     </div>
 </div>
@@ -213,20 +214,21 @@
 
 <script type="text/javascript">
     $(function(){
+
+        var Scroll = new iScroll('wrapper1',{vScroll: false,hScrollbar:false, vScrollbar:false});
         <!--自动播放-->
         $(document).ready(function(){
-            $(".scrollbox").textSlider({line:1,speed:600,timer:3000});
-            $(".scrollbox1").textSlider({line:1,speed:600,timer:3000});
-            $(".scrollbox2").textSlider({line:1,speed:600,timer:3000});
+            $(".scrollbox").textSlider({line:1,speed:700,timer:4000});
+            $(".scrollbox1").textSlider({line:1,speed:650,timer:3000});
+            $(".scrollbox2").textSlider({line:1,speed:600,timer:5000});
         });
-        var Scroll = new iScroll('wrapper',{vScroll: false,hScrollbar:false, vScrollbar:false});
-        var Scroll = new iScroll('wrapper1',{vScroll: false,hScrollbar:false, vScrollbar:false});
 
-    })
+    });
+
+
+
+
 </script>
-
-<!--分享-->
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["sqq","qzone","weixin","tsina"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["sqq","qzone","weixin","tsina"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 <script>
     var flag=false;
@@ -242,6 +244,9 @@ $('.more1').on('click',function () {
 })
 </script>
 
+<script>
+
+</script>
 
 </body>
 </html>

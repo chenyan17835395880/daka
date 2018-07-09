@@ -29,6 +29,7 @@
         var autoPlay=function(){
             timerID = window.setInterval(scrollUp,settings.timer);
         };
+
         var autoStop = function(){
             window.clearInterval(timerID);
         };
