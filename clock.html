@@ -1,34 +1,47 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--文档使用的编码-->
     <meta charset="UTF-8">
+    <!--为移动设备添加viewport-->
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--优先使用IE最新版本和chrome-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="HandheldFriendly" content="true">
+    <meta name="applicable-device" content="pc,mobile">
+    <!--<meta name="MobileOptimized" content="width">-->
     <title>早起打卡</title>
     <script src="js/rem.js"></script>
     <link rel="stylesheet" href="css/clock.css">
-    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="js/jQuery.textSlider.js"></script>
     <script type="text/javascript" src="js/iscroll.js"></script>
-    <script type="text/javascript" src="js/clock.js"></script>
 
 </head>
 <body>
 <!--banner-->
-<div class="banner"><img src="" alt=""></div>
+<div class="banner">
+
+</div>
 <!--tips-->
+<!--活动-->
+<div class="activityid" style="display:none"></div>
+<div id="bottombox">
+
 <ul class="tips">
     <li>
-        <div class="num">666</div>
+        <div class="num" id="num1"></div>
         <p>已累积公益金</p>
     </li>
     <li>
-        <div class="num">236</div>
+        <div class="num" id="num2"></div>
         <p>参与人数</p>
     </li>
     <li>
-        <div class="num">88</div>
+        <div class="num" id="num3"></div>
         <p>终极大奖</p>
     </li>
 </ul>
@@ -37,19 +50,20 @@
     <ul class="activityleft">
         <li>
             <img src="imgs/形状18@2x.png" alt="">
-            <div class="text">活动时间：<span>2018-2-1至2018-5-1</span></div>
+            <div class="text">活动时间：<span id="activitydate"></span></div>
         </li>
         <li>
             <img src="imgs/形状18拷贝@2x.png" alt="">
-            <div class="text">报名截止时间：<span>2018-2-1&nbsp;&nbsp;07:00</span></div>
+            <div class="text">报名截止时间：<span id="signupdate"></span></div>
         </li>
         <li>
             <img src="imgs/形状18拷贝2@2x.png" alt="">
-            <div class="text">签到时间：<span>4:00至7:00</span></div>
+            <div class="text">签到时间：<span id="signdate"></span></div>
         </li>
     </ul>
-    <div class="activityright">签到</div>
+    <div class="activityright"></div>
 </div>
+<div class="tan"></div>
 <!--join-->
 <div class="join">
     <div class="top">
@@ -58,15 +72,10 @@
             <div class="text">活动规则</div>
         </div>
     </div>
-    <ul class="center">
-        <li>1.日奖金:按时签到成功可瓜分当日签到失败人数*3的奖金</li>
-        <li>2.按时签到满一周，瓜分终极大奖</li>
-        <li>3.报名支付成功后，UNLife将代表你向担当者活动教育基金会的“班班有个图书角”项目捐出1元</li>
-        <li>4.日奖金:按时签到成功可瓜分当日签到失败人数*3的奖金</li>
-        <li>5.按时签到满一周，瓜分终极大奖</li>
-        <li>6.报名支付成功后，UNLife将代表你向担当者活动教育基金会的“班班有个图书角”项目捐出1元</li>
+    <ul class="center" id="rule">
+
     </ul>
-    <div class="more1">更多&nbsp;>&nbsp;</div>
+    <div class="more1"><span class="span1">更多</span>&nbsp;<span class="icon">></span>&nbsp;</div>
 </div>
 <!--邀请-->
 <div class="invitation">
@@ -77,28 +86,13 @@
         </div>
     </div>
     <div class="bigulbox">
-        <ul class="invitationbox">
-            <li>
+        <!--<ul class="invitationbox">
+            <li id="">
                 <img src="imgs/1.jpg" alt="">
                 <p>反反复复</p>
+                <div class="sex" style="display:none;"></div>
             </li>
-            <li>
-                <img src="imgs/2.jpg" alt="">
-                <p>反反复复</p>
-            </li>
-            <li>
-                <img src="imgs/3.jpg" alt="">
-                <p>反反复复</p>
-            </li>
-            <li>
-                <img src="imgs/4.jpg" alt="">
-                <p>反反复复</p>
-            </li>
-            <li>
-                <img src="imgs/1.jpg" alt="">
-                <p>反反复复</p>
-            </li>
-        </ul>
+        </ul>-->
     </div>
     <div id="ulzhe"></div>
 </div>
@@ -117,26 +111,7 @@
                 <div class="scrollbox" id="scrollbox">
                     <div class="scroll">
                         <ul class="ul" id="rewardlist">
-                            <li>
-                                <span class="name">称000</span>
-                                <p class="daysnum">20天</p>
-                            </li>
-                            <li>
-                                <span class="name">书上说</span>
-                                <p class="daysnum">20天</p>
-                            </li>
-                            <li>
-                                <span class="name">昵称v哈哈1</span>
-                                <p class="daysnum">20天</p>
-                            </li>
-                            <li>
-                                <span class="name">昵ooo称sss</span>
-                                <p class="daysnum">20天</p>
-                            </li>
-                            <li>
-                                <span class="name">昵称uu</span>
-                                <p class="daysnum">20天</p>
-                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -150,26 +125,7 @@
                 <div class="scrollbox1">
                     <div class="scroll1">
                         <ul class="ul" id="earlylist">
-                            <li>
-                                <span class="name">昵称yyy</span>
-                                <p class="daysnum">20天</p>
-                            </li>
-                            <li>
-                                <span class="name">昵称qqq</span>
-                                <p class="daysnum">20天</p>
-                            </li>
-                            <li>
-                                <span class="name">昵称ooo</span>
-                                <p class="daysnum">20天</p>
-                            </li>
-                            <li>
-                                <span class="name">昵称ppp</span>
-                                <p class="daysnum">20天</p>
-                            </li>
-                            <li>
-                                <span class="name">昵称444</span>
-                                <p class="daysnum">20天</p>
-                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -183,26 +139,7 @@
                 <div class="scrollbox2">
                     <div class="scroll2">
                         <ul class="ul" id="invitelist">
-                            <li>
-                                <span class="name">昵称000</span>
-                                <p class="daysnum">20天</p>
-                            </li>
-                            <li>
-                                <span class="name">昵称111</span>
-                                <p class="daysnum">20天</p>
-                            </li>
-                            <li>
-                                <span class="name">昵称222</span>
-                                <p class="daysnum">20天</p>
-                            </li>
-                            <li>
-                                <span class="name">昵称333</span>
-                                <p class="daysnum">20天</p>
-                            </li>
-                            <li>
-                                <span class="name">昵称444</span>
-                                <p class="daysnum">20天</p>
-                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -213,92 +150,528 @@
 </div>
 <div class="bigzhe"></div>
 
+</div>
 
 <script type="text/javascript">
     $(function(){
+       var Scroll = new iScroll('wrapper1',{vScroll: false,hScrollbar:false, vScrollbar:false});
 
-        var Scroll = new iScroll('wrapper1',{vScroll: false,hScrollbar:false, vScrollbar:false});
-        <!--自动播放-->
-        $(document).ready(function(){
-            $(".scrollbox").textSlider({line:1,speed:700,timer:4000});
-            $(".scrollbox1").textSlider({line:1,speed:650,timer:3000});
-            $(".scrollbox2").textSlider({line:1,speed:600,timer:5000});
-        });
-
-    });
-
-
-
-
-</script>
-
-<script>
-    $(function(){
         var flag=false;
         $('.more1').on('click',function () {
             if(flag==false){
                 $('.join .center').css({'overflow':'visible','height':'auto'});
+                $('.more1 .span1').html('收起');
+                $('.more1 .icon').css({'transform':'rotate(-90deg)','display':'inline-block'})
                 flag=true;
             }else if(flag==true){
                 $('.join .center').css({'overflow':'hidden','height':'2.4rem'});
+                $('.more1 .span1').html('更多');
+                $('.more1 .icon').css({'transform':'rotate(90deg)','display':'inline-block'})
                 flag=false;
             }
 
         })
+        /*签到弹框*/
+        $('.bigzhe').click(function(){
+            $('.tan').css('display','none');
+            $('.bigzhe').css('display','none')
+        })
 
-        var baseUrl = "http://localhost:8080/";
+        var baseUrl = "http://192.168.1.103:8080/unlife";
+
         /*ajax*/
-        /*登陆*/
-
-        /*var loginurl= baseUrl +  "unlife/login";
+        /*/!*登陆*!/
+        var loginurl= baseUrl +  "/login";
         var logindata={
             "schoolId": 3,
             "platform": "ios",
             "password": "p12345",
-            "username": "2014030509",
+            "username": "2012120510",
             "pushId": "171976fa8aa037b3b0f"
         };
         $.ajax({
             url:loginurl,
             type: 'post',
-            data:logindata,
-            dataType:"json",
-            //contentType: false,
-            //processData: false,
+            data:JSON.stringify(logindata),
+            dataType:'json',
+            contentType:'application/json',
             success:function success(data){
                 console.log(data)
             },
             error:function error(err){
-                console.log(err)
+                console.log('err')
             }
         })*/
+        var localurl=window.location.href;
 
+        /*if(localurl.lastIndexOf('&')<0){
+            var start=localurl.lastIndexOf('?')+1;
+            var end=localurl.lastIndexOf('=');
+            var str=localurl.substring(start,end);
+            if(str == 'userId'){
+                var userid=localurl.substring(localurl.lastIndexOf('=')+1)
+            }else{
+                console.log('获取用户id失败');
+            }
 
+        }else if(localurl.lastIndexOf('&')>0){
+            var start=localurl.lastIndexOf('?')+1;
+            var end=localurl.lastIndexOf('&');
+            var str=localurl.substring(start,end)
+            var useridstr=str.substring(0,str.lastIndexOf('='));
+            console.log(useridstr)
+            if(useridstr == 'userId'){
+                var userid=str.substring(str.lastIndexOf('=')+1)
+            }else{
+                console.log('获取用户id失败');
+            }
 
+        }*/
 
+        if(localurl.indexOf('&')<0){
+            var start=localurl.lastIndexOf('?')+1;
+            var end=localurl.lastIndexOf('=');
+            var str=localurl.substring(start,end);
+            if(str == 'userId'){
+                var userid=localurl.substring(end+1)
+            }else{
+                console.log('获取用户id失败');
+            }
+        }else if(localurl.indexOf('&')>0){
+            var start=localurl.lastIndexOf('&')+1;
+            var end=localurl.lastIndexOf('=');
+            var str=localurl.substring(start,end);
+            if(str == 'userId'){
+                var userid=localurl.substring(end+1)
+            }else{
+                console.log('获取用户id失败');
+            }
+        }
+        console.log(userid)
 
-
-
-
-
-        var url= baseUrl +  "unlife/activityConfig/getActivityH5Info";
+        /*获取活动信息*/
+        var url= baseUrl +  "/activityConfig/getActivityH5Info";
+        var activityid=1;
         var data={
-            "activityconfigid": 1
+            "activityconfigid": activityid,
+            "userid":userid,
         };
         $.ajax({
             url:url,
             type: 'post',
-            data:data,
-            dataType:"json",
-            //contentType: false,
-            //processData: false,
+            data:JSON.stringify(data),
+            dataType:'json',
+            contentType:'application/json',
             success:function success(data){
                 console.log(data)
+                function add0(m){return m<10?'0'+m:m }
+                function format(shijianchuo) {
+                    //shijianchuo是整数，否则要parseInt转换
+                    var time = new Date(shijianchuo);
+                    var y = time.getFullYear();
+                    var m = time.getMonth()+1;
+                    var d = time.getDate();
+                    var h = time.getHours();
+                    var mm = time.getMinutes();
+                    var s = time.getSeconds();
+                    return y+'-'+add0(m)+'-'+add0(d)+' '+add0(h)+':'+add0(mm);
+                }
+                function formatdate(shijianchuo) {
+                    //shijianchuo是整数，否则要parseInt转换
+                    var time = new Date(shijianchuo);
+                    var y = time.getFullYear();
+                    var m = time.getMonth()+1;
+                    var d = time.getDate();
+                    var h = time.getHours();
+                    var mm = time.getMinutes();
+                    var s = time.getSeconds();
+                    return y+'-'+add0(m)+'-'+add0(d);
+                }
+                /*签到按钮*/
+                if(data.data.button==0){
+                    $('.activityright').html('签到');
+                    var signurl=baseUrl+"/moringactivitysign/clockIn";
+                    var signdata={
+                        "activityconfigid": 1,
+                         "userid":userid,
+                    }
+                    $.ajax({
+                        url:signurl,
+                        type: 'post',
+                        data:JSON.stringify(signdata),
+                        dataType:'json',
+                        contentType:'application/json',
+                        success:function(data1){
+                            console.log(data1);
+                            if($('.activityright').html()=='签到'){
+                                $('.activityright').click(function(){
+                                    if(data1.message=='签到成功'){
+                                        $('.activityright').html('签到成功');
+                                    }else if(data1.message=='签到失败'){
+                                        $('.activityright').html('签到失败').css({'background':'#ADADAD','border':'0.01rem solid #ADADAD'});
+                                    }
+                                    $('.tan').html(data1.message).css('display','block');
+                                    $('.bigzhe').css('display','block');
+                                })
+                            }
+
+                        }
+                    })
+                }else if(data.data.button==1){
+                    $('.activityright').html('签到成功');
+                }else if(data.data.button==2){
+                    $('.activityright').html('签到失败');
+                    $('.activityright').css({'background':'#ADADAD','border':'0.01rem solid #ADADAD'})
+                }
+                /*累计公益*/
+                $('#num1').html(data.data.chest);
+                /*报名时间*/
+                var signupbegintime=format(data.data.signupbegintime);
+                var signupendtime=format(data.data.signupendtime);
+                $('#signupdate').html(signupendtime);
+                /*活动时间*/
+                var begintime=formatdate(data.data.begintime);
+                var endtime=formatdate(data.data.endtime);
+                var endtime1=endtime.substring(endtime.indexOf('-')+1);
+                $('#activitydate').html(begintime+'至'+endtime1);
+                /*签到时间*/
+                $('#signdate').html(data.data.signbegintime+'至'+data.data.signendtime);
+                /*活动规则*/
+                var rulearr=(data.data.rule).split('\r\n');
+                var arr=[];
+                for(var i=0;i<rulearr.length;i++){
+                    arr.push(`<li>`+rulearr[i]+`</li>`);
+                }
+                $('#rule').html(arr);
+                /*参与人数*/
+                $('#num2').html(data.data.userNumber);
+                /*终极大奖*/
+                $('#num3').html(data.data.finalmoney);
+                /*活动id*/
+                $('.activityid').html(data.data.id);
+                activityid=data.data.id;
             },
             error:function error(err){
-                console.log(err)
+                console.log('err')
             }
         })
+
+        /*获得邀请好友列表*/
+        var inviteurl=baseUrl+ "/moringactivitymember/getInviteUser";
+        var pagenumber=1;
+        var invitedata={
+            "pagenumber": pagenumber,
+            "pagesize": 5,
+            "activityconfigid":activityid,
+            "userId":userid,
+        }
+        $.ajax({
+            url:inviteurl,
+            type:'post',
+            data:JSON.stringify(invitedata),
+            dataType:'json',
+            contentType:'application/json',
+            success:function success(data1){
+                console.log(data1)
+                if(data1.data.total<=5){
+                    if(data1.data.records.length>0){
+                        render($('.bigulbox'),data1);
+                    }else  if(data1.data.records.length==0){
+                        $('.invitation').remove();
+                    }
+                }else if(data1.data.total>5){
+                    var pages=Math.ceil(data1.data.total/5);
+                    console.log(pagenumber,pages)
+                    if(pagenumber<=pages){
+                        render($('.bigulbox'),data1);
+                        pagenumber++;
+                        ////////////////////////////////////////////////////////////*火狐*/
+                        var box1=$('#ulzhe');
+                        var startx1,starty1,movex1,movey1,startx2,movex2;
+                        box1.mousedown(function(e){
+                            e.preventDefault();
+                            e= window.event || arguments.callee.caller.arguments[0];
+                            startx1=e.clientX;starty1=e.clientX;
+
+                        });
+                        $(document).mousemove(function(e) {
+                            e.preventDefault();
+                            e = window.event || arguments.callee.caller.arguments[0];
+                            movex1 = e.clientX;
+                            movey1 = e.clientX;
+
+                        });
+                        var num1=0;
+                        box1.mouseup(function(e){
+                            var ulbox1=$('.bigulbox');
+                            if(movex1-startx1<0){
+
+                                console.log(pagenumber,'PPPPP')
+
+                                    var invitedata={
+                                        "pagenumber": pagenumber,
+                                        "pagesize": 5,
+                                        "activityconfigid":activityid,
+                                        "userId":userid,
+                                    }
+                                    $.ajax({
+                                        url:inviteurl,
+                                        type:'post',
+                                        data:JSON.stringify(invitedata),
+                                        dataType:'json',
+                                        contentType:'application/json',
+                                        success:function success(data3){
+                                            if(data3.data.records.length>0){
+                                                render($('.bigulbox'),data3)
+                                                num1++;
+                                                var w=$('.invitationbox') .width();
+                                                var num=$('.invitationbox').length+1;
+                                                ulbox1.css({'width':w*num+'px','transform':'translateX('+ -w*num1 + 'px)','transition':'all 1.3s'});
+                                                pagenumber++;
+                                            }
+                                            if(data3.data.records.length==0){
+                                                $('#ulzhe').off('mouseup')
+                                            }
+                                        }
+                                    })
+                            }else if(movex1-startx1>0){
+                                num1--;
+                                var w=$('.invitationbox') .width();
+                                var num=$('.invitationbox').length+1;
+                                if(num1>=0){
+                                    ulbox1.css({'transform':'translateX('+ -w*num1 + 'px)','transition':'all 1.3s'});
+                                }else{
+                                    ulbox1.css({'transform':'translateX(0px)','transition':'all 1.3s'});
+                                    num1=0;
+                                }
+                            }
+                        })
+
+                        ///////////////////////////////////////////////////////*谷歌*/
+                        var box = document.querySelector("#ulzhe");
+                        var startx,starty,movex,movey;
+                        box.ontouchstart= function (e){
+                            e.preventDefault();
+                            startx=e.touches[0].clientX;starty=e.touches[0].clientX;
+                        }
+                        box.ontouchmove=function (e){
+                            e.preventDefault();
+                            movex=e.touches[0].clientX;movey=e.touches[0].clientX;
+                        }
+                        box.ontouchend=function (e){
+                            e.preventDefault();
+                            var ulbox=$('.bigulbox');
+                            if(movex-startx<0){
+                                console.log(pagenumber)
+
+                                    var invitedata={
+                                        "pagenumber": pagenumber,
+                                        "pagesize": 5,
+                                        "activityconfigid":activityid,
+                                        "userId":userid,
+                                    }
+                                    $.ajax({
+                                        url:inviteurl,
+                                        type:'post',
+                                        data:JSON.stringify(invitedata),
+                                        dataType:'json',
+                                        contentType:'application/json',
+                                        success:function success(data3){
+                                            if(data3.data.records.length>0){
+                                                render($('.bigulbox'),data3)
+                                                num1++;
+                                                var w=$('.invitationbox') .width();
+                                                var num=$('.invitationbox').length+1;
+                                                ulbox.css({'width':w*num+'px','transform':'translateX('+ -w*num1 + 'px)','transition':'all 1.3s'});
+                                                pagenumber++;
+                                            }
+                                            if(data3.data.records.length==0){
+                                                $('#ulzhe').ontouchend=null;
+                                            }
+                                        }
+                                    })
+
+                            }else if(movex-startx>0){
+                                num1--;
+                                var w=$('.invitationbox') .width();
+                                var num=$('.invitationbox').length;
+                                if(num1>=0){
+                                    ulbox.css({'transform':'translateX('+ -w*num1 + 'px)','transition':'all 1.3s'});
+                                }else{
+                                    ulbox.css({'transform':'translateX(0px)','transition':'all 1.3s'});
+                                    num1=0;
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            error:function error(err){
+                console.log('err3')
+            }
+        });
+
+        function render(obj,data){
+            var str='';
+            var arr=[];
+                for(var i=0;i<data.data.records.length;i++){
+                    var sexstr;
+                    if(data.data.records[i].headImgUrl != null){
+
+                    }else if(data.data.records[i].sex != null && data.data.records[i].headImgUrl == null){
+                        if(data.data.records[i].sex == 0){
+                            sexstr='女';
+                            data.data.records[i].headImgUrl='http://47.94.136.89/activityFiles/women.png';
+                        }else if(data.data.records[i].sex == 1){
+                            sexstr='男';
+                            data.data.records[i].headImgUrl='http://47.94.136.89/activityFiles/man.png';
+                        }
+                    }
+                    arr.push(`<li id="${data.data.records[i].id}">
+                                   <img src="${data.data.records[i].headImgUrl}" alt="">
+                                   <p>${data.data.records[i].name}</p>
+                                   <div class="sex" style="display:none;">${sexstr}</div>
+                              </li>`)
+
+                }
+
+            str+=` <ul class="invitationbox" width="6.68rem">`+ arr.join('') +`</ul> `;
+            obj.html(function (i,v) {
+                return v+str;
+            })
+        }
+
+        /*获得榜单*/
+        var listurl=baseUrl + '/moringactivitymember/getlist';
+        var listdata={
+            "activityconfigid": activityid
+        };
+        $.ajax({
+            url:listurl,
+            type:'post',
+            data:JSON.stringify(listdata),
+            dataType:'json',
+            contentType:'application/json',
+            success:function success(data){
+                console.log(data)
+                var arr = Object.keys(data.data);
+                var len = arr.length;
+                if(len==1){
+                    if(data.data.invitelist){
+                        renderinvitelist($('#invitelist'),data.data.invitelist);
+                        $('#ranklist li:eq(0)').hide();
+                        $('#ranklist li:eq(1)').hide();
+                        $('.RankingListbox').css('width','100%')
+                        $('#ranklist li:eq(2)').css({'width':'48%','marginRight':'auto','margin':'0 auto'});
+                        $('#wrapper1').prepend('<div style="width:100%;height:2.2rem;position: relative;z-index: 9999;"></div>')
+                    }else if(data.data.rewardlist){
+                        $('#ranklist li:eq(2)').hide();
+                        $('#ranklist li:eq(1)').hide();
+                        renderrewardlist($('#rewardlist'),data.data.rewardlist);
+                        $('.RankingListbox').css('width','100%')
+                        $('#ranklist li:eq(0)').css({'width':'48%','marginRight':'auto','margin':'0 auto'})
+                        $('#wrapper1').prepend('<div style="width:100%;height:2.2rem;position: relative;z-index: 9999;"></div>')
+                    }else if(data.data.morninglist){
+                        $('#ranklist li:eq(0)').hide();
+                        $('#ranklist li:eq(2)').hide();
+                        rendermorninglist($('#earlylist'),data.data.morninglist);
+                        $('.RankingListbox').css('width','100%')
+                        $('#ranklist li:eq(1)').css({'width':'48%','marginRight':'auto','margin':'0 auto'})
+                        $('#wrapper1').prepend('<div style="width:100%;height:2.2rem;position: relative;z-index: 9999;"></div>')
+                    }
+                }
+                if(len==2){
+                    if(data.data.morninglist &&  data.data.rewardlist){
+                        $('#ranklist li:eq(2)').hide();
+                        rendermorninglist($('#earlylist'),data.data.morninglist);
+                        $('#ranklist li:eq(1)').css('width','48%')
+                        renderrewardlist($('#rewardlist'),data.data.rewardlist);
+                        $('#ranklist li:eq(0)').css('width','48%')
+                        $('#wrapper1').prepend('<div style="width:100%;height:2.2rem;position: relative;z-index: 9999;"></div>')
+                    }else if(data.data.morninglist &&  data.data.invitelist){
+                        $('#ranklist li:eq(0)').hide();
+                        rendermorninglist($('#earlylist'),data.data.morninglist);
+                        $('#ranklist li:eq(1)').css('width','48%')
+                        renderinvitelist($('#invitelist'),data.data.invitelist);
+                        $('#ranklist .li:eq(2)').width('48%');
+                        $('#wrapper1').prepend('<div style="width:100%;height:2.2rem;position: relative;z-index: 9999;"></div>')
+                    }else if(data.data.rewardlist &&  data.data.invitelist){
+                        $('#ranklist li:eq(1)').hide();
+                        renderrewardlist($('#rewardlist'),data.data.rewardlist);
+                        $('#ranklist li:eq(0)').css('width','48%')
+                        renderinvitelist($('#invitelist'),data.data.invitelist);
+                        $('#ranklist .li:eq(2)').css('width','48%')
+                        $('#wrapper1').prepend('<div style="width:100%;height:2.2rem;position: relative;z-index: 9999;"></div>')
+                    }
+                }
+                if(len==3){
+                    renderrewardlist($('#rewardlist'),data.data.rewardlist);
+                    renderinvitelist($('#invitelist'),data.data.invitelist);
+                    rendermorninglist($('#earlylist'),data.data.morninglist);
+
+                }
+                if(len==0){
+                    $('#ranklist li:eq(2)').hide();
+                    $('#ranklist li:eq(0)').hide();
+                    $('#ranklist li:eq(1)').hide();
+                }
+                /*renderrewardlist($('#rewardlist'),data.data.rewardlist);
+                rendermorninglist($('#earlylist'),data.data.morninglist);*/
+            }
+        })
+        function renderinvitelist(obj,data){
+            obj.html('');
+            var str='';
+            for (var i=0;i<data.length;i++){
+                str+=`
+                   <li>
+                       <span class="name">${data[i].name}</span>
+                       <p class="daysnum">${data[i].number}</p>
+                   </li>
+            `
+            }
+            obj.html(function(i,v){
+                return v+str;
+            })
+        }
+        function renderrewardlist(obj,data){
+            obj.html('');
+            var str='';
+            for (var i=0;i<data.length;i++){
+                str+=`
+                   <li>
+                       <span class="name">${data[i].name}</span>
+                       <p class="daysnum">${data[i].reward}</p>
+                   </li>
+            `
+            }
+            obj.html(function(i,v){
+                return v+str;
+            })
+        }
+        function rendermorninglist(obj,data){
+            obj.html('');
+            var str='';
+            for (var i=0;i<data.length;i++){
+                str+=`
+                   <li>
+                       <span class="name">${data[i].name}</span>
+                       <p class="daysnum">${data[i].signtime}</p>
+                   </li>
+            `
+            }
+            obj.html(function(i,v){
+                return v+str;
+            })
+        }
+
+        <!--自动播放-->
+        $(document).ready(function(){
+            $(".scrollbox1").textSlider({line:1,speed:650,timer:3000});
+            $(".scrollbox2").textSlider({line:1,speed:600,timer:5000});
+            $(".scrollbox").textSlider({line:1,speed:600,timer:5000});
+        });
+
     })
 </script>
 
