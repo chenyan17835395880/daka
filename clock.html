@@ -1,4 +1,4 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -76,29 +76,31 @@
             <div class="text">邀请好友参与</div>
         </div>
     </div>
-    <ul class="invitationbox">
-        <li>
-            <img src="imgs/1.jpg" alt="">
-            <p>反反复复</p>
-        </li>
-        <li>
-            <img src="imgs/2.jpg" alt="">
-            <p>反反复复</p>
-        </li>
-        <li>
-            <img src="imgs/3.jpg" alt="">
-            <p>反反复复</p>
-        </li>
-        <li>
-            <img src="imgs/4.jpg" alt="">
-            <p>反反复复</p>
-        </li>
-        <li>
-            <img src="imgs/1.jpg" alt="">
-            <p>反反复复</p>
-        </li>
-        <div id="ulzhe"></div>
-    </ul>
+    <div class="bigulbox">
+        <ul class="invitationbox">
+            <li>
+                <img src="imgs/1.jpg" alt="">
+                <p>反反复复</p>
+            </li>
+            <li>
+                <img src="imgs/2.jpg" alt="">
+                <p>反反复复</p>
+            </li>
+            <li>
+                <img src="imgs/3.jpg" alt="">
+                <p>反反复复</p>
+            </li>
+            <li>
+                <img src="imgs/4.jpg" alt="">
+                <p>反反复复</p>
+            </li>
+            <li>
+                <img src="imgs/1.jpg" alt="">
+                <p>反反复复</p>
+            </li>
+        </ul>
+    </div>
+    <div id="ulzhe"></div>
 </div>
 
 <!--排行榜-->
@@ -231,17 +233,73 @@
 </script>
 
 <script>
-    var flag=false;
-$('.more1').on('click',function () {
-    if(flag==false){
-        $('.join .center').css({'overflow':'visible','height':'auto'});
-        flag=true;
-    }else if(flag==true){
-        $('.join .center').css({'overflow':'hidden','height':'2.4rem'});
-        flag=false;
-    }
+    $(function(){
+        var flag=false;
+        $('.more1').on('click',function () {
+            if(flag==false){
+                $('.join .center').css({'overflow':'visible','height':'auto'});
+                flag=true;
+            }else if(flag==true){
+                $('.join .center').css({'overflow':'hidden','height':'2.4rem'});
+                flag=false;
+            }
 
-})
+        })
+
+        var baseUrl = "http://localhost:8080/";
+        /*ajax*/
+        /*登陆*/
+
+        /*var loginurl= baseUrl +  "unlife/login";
+        var logindata={
+            "schoolId": 3,
+            "platform": "ios",
+            "password": "p12345",
+            "username": "2014030509",
+            "pushId": "171976fa8aa037b3b0f"
+        };
+        $.ajax({
+            url:loginurl,
+            type: 'post',
+            data:logindata,
+            dataType:"json",
+            //contentType: false,
+            //processData: false,
+            success:function success(data){
+                console.log(data)
+            },
+            error:function error(err){
+                console.log(err)
+            }
+        })*/
+
+
+
+
+
+
+
+
+
+        var url= baseUrl +  "unlife/activityConfig/getActivityH5Info";
+        var data={
+            "activityconfigid": 1
+        };
+        $.ajax({
+            url:url,
+            type: 'post',
+            data:data,
+            dataType:"json",
+            //contentType: false,
+            //processData: false,
+            success:function success(data){
+                console.log(data)
+            },
+            error:function error(err){
+                console.log(err)
+            }
+        })
+    })
 </script>
 
 <script>
